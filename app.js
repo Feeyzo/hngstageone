@@ -5,7 +5,7 @@ app.get('/api', (req, res) => {
     const slackName = req.query.slack_name || 'Abdulhafiz Bello';
     const track = req.query.track || 'backend';
     const currentDay = new Date().toLocaleDateString('en-US', { weekday: 'long' });
-    const utcTime = new Date().toISOString();
+    const utcTime = new Date().toISOString().split('.')[0] + 'Z';
     const githubFileUrl = 'https://github.com/feeyzo/repo/blob/main/hngstageone.ext';
     const githubRepoUrl = 'https://github.com/Feeyzo/hngstageone.git';
 
