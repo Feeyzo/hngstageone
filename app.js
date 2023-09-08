@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/api', (req, res) => {
-    const slackName = req.query.slack_name || 'example_name';
+    const slackName = req.query.slack_name || 'Abdulhafiz Bello';
     const track = req.query.track || 'backend';
     const currentDay = new Date().toLocaleDateString('en-US', { weekday: 'long' });
     const utcTime = new Date().toISOString();
